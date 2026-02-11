@@ -1,6 +1,5 @@
 import tkinter as tk
 
-# -------------------- BUTTON LAYOUT -------------------- #
 # Each inner list represents one row of buttons
 button_values = [
     ["AC", "+/-", "%", "/"],
@@ -16,7 +15,6 @@ right_symbols = ["+", "-", "*", "/"]
 # Special buttons at the top
 top_symbols = ["AC", "+/-", "%"]
 
-# Get number of rows and columns
 row_count = len(button_values)
 column_count = len(button_values[0])
 
@@ -72,7 +70,6 @@ def clear_all():
     A = "0"
     B = None
     operator = None
-
 
 def button_clicked(value):
     """
@@ -137,7 +134,6 @@ def button_clicked(value):
             else:
                 label["text"] += value
 
-
 # create buttons based on the button_values layout
 for row in range(row_count):
     for column in range(column_count):
@@ -168,6 +164,6 @@ for row in range(row_count):
         else:
             button.config(bg=color_dark_gray)
 
-
 # Start the main event loop
 window.mainloop()
+
